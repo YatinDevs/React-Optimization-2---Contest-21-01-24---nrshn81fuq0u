@@ -9,15 +9,16 @@ const App = () => {
 
 const OptimizeTheOperation = () => {
   const [number, setNumber] = useState(10000);
-  const [prime ,setPrime] = useState([]);
+
+  const [prime, setPrime] = useState([]);
 
   useEffect(()=>{
+
     const calculatePrimeNumbers = async ()=>{
       const result = await primeNumber(number);
-      setPrime(result)
-      }
+      setPrime(result);
+    }
 
-      calculatePrimeNumbers();
   },[number])
  
 
